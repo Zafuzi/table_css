@@ -1,0 +1,31 @@
+:root{
+    --table-text-color: #111;
+    --table-border-color: #ccc;
+    --table-header-color: #111;
+    --table-header-text-color: #FFF;
+    --table-row-padding: 0.3em;
+    --table-border-width: 2px;
+    --table-border-style: solid;
+    --table-content-align: left;
+    --table-header-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: var(--table-border-style);
+    border-width: var(--table-border-width);
+    border-color: var(--table-border-color);
+    text-align: var(--table-content-align);
+}
+table.table-vertical { table-layout: fixed; }
+table.table-vertical tr th { width: 200px; }
+
+td { border: var(--table-border-width) var(--table-border-style) var(--table-border-color); }
+th { 
+    border: var(--table-border-width) solid var(--table-header-color);
+    background-color: var(--table-header-color);
+    color: var(--table-header-text-color);
+    text-align: var(--table-header-align);
+}
+td, th { padding: var(--table-row-padding); }
